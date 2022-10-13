@@ -45,9 +45,9 @@ button{
     align-items: center; /* Отцентруйте их по вертикали */
     padding-top: 115px; /* Выставите нижний и верхний внутренний отступ */
     padding-bottom: 115px;
-    background: url(/img/back.png) no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: url(/img/back.png) no-repeat; /* фон будет картинкой по адресу, написанному в URL */
+    background-position: center; /* чтобы картинка разместилась ровно посередине блока */
+    background-size: cover; /* чтобы картинка фона растягивалась под размер секции, полностью покрывая ее (поэтому это cover — покрывать)*/
 }
 .about h1{
     font-size: 70px; /* размер шрифта */
