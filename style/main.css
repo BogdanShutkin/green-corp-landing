@@ -458,8 +458,7 @@ footer h3{
         align-items: center; /* Отцентруйте их по вертикали */
         background-color: #1D263A;
         color: #fff;
-        padding-top: 115px;
-        padding-bottom: 115px;
+        padding: 50px 10px;
         text-align: center;
     }
     .form h1{
