@@ -93,6 +93,151 @@ button:hover{
 .about__info{
     max-width: 550px;
 }
+
+
+
+.features {
+    background-color: #fff;
+    padding: 115px 60px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+.card{
+    padding: 35px 40px 25px 40px;
+    border: 1px solid #D9E4E6;
+    border-radius: 5px;
+}
+.card p{
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+}
+.card__logo{
+    width: 100px;
+    height: 100px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ad1714;
+}
+.fa-solar-panel{
+    color: #ffb406;
+}
+.fa-chart-line{
+    color: #22a030;
+}
+.features__border{
+    margin: 50px 0px;
+    border: 1px solid #E6EAF4;
+}
+
+.features__feedback{
+    display: flex;
+}
+
+.features__feedback-left{
+    margin-right: 10px;
+}
+.features__feedback-left h2{
+    font-size: 48px;
+}
+.features__feedback-left p{
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+.features__feedback-right{
+    display: flex;
+    align-items: center;
+}
+.features__box{
+    padding: 30px 40px 25px 40px;
+    color: #fff;
+    border-radius: 25px;
+    height: 50%;
+}
+.features__box h3{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 48px;
+    color: #fff;
+    border-radius: 25px;
+}
+.features__savings-box{
+    background-color: #dc5e26;
+    box-shadow: 0px 6px 0 rgb(221 95 38 / 20%);
+    margin-right: 30px;
+    height: 150px;
+}
+.features__rate-box{
+    background-color: #1D263A;
+    box-shadow: 0px 6px 0 rgb(29 38 58 / 20%);
+    height: 150px;
+}
+.fa-star{
+    color: #ff7039
+}
+
+.promo{
+    display: flex;
+}
+.promo__image{
+    background-image: url("/img/promo.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    flex-shrink: 0;
+}
+.promo__right{
+    background-color: #dd5f26;
+    padding: 160px 60px;
+}
+.promo__right-text{
+    background-color: #fff;
+    padding: 30px 40px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+.promo__right-text p::before{
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #ec6b29;
+    margin-right: 10px;
+}
+.promo__right-text p{
+    opacity: 0.8;
+}
+.promo__submit{
+    background-color: #107b1c;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px 30px;
+    font-weight: 600;
+}
+.promo__button{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.fa-chevron-right{
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+
 .form_container{
     width: 550px;
 }
@@ -176,358 +321,146 @@ footer h3{
 }
 
 @media (max-width: 1024px) {
-    body{
-        font-family: 'Raleway', sans-serif;
-        color: #213053;
-        margin: 0;
+    .about {
+        padding: 115px 20px;
     }
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px;
-        position: sticky; /* шапка прилипла, но не закрывает контент */
-        background-color:#fff;
-        top: 0;
-        z-index: 1; /* глубина расположения элементов (слои) */
+  
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
     }
-    .header__logo{
-        height: 30px;
+
+    .features {
+        padding: 50px 10px 50px 10px;
     }
-    a{
-        text-decoration: none;
-        color: #213053;
+    .cards {
+        grid-template-columns: auto;
     }
-    header a{
-        font-size: 15px;
-        font-weight: 600;
-        margin-right: 25px;
+    .features__feedback{
+        flex-direction: column;
     }
-    button{
-        font-family: 'Raleway', sans-serif;
-        font-size: 15px;
-        color: #fff;
-        background-color: #23a030;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-        box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
-        padding: 15px;
+    .features__feedback-left{
+        margin-right: 0px;
     }
-    button:hover{
-        background-color: #f6980c;
-        box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
-        transition: background-color 0.3s ease-in;
-    }
-    .about__image{
-        width: 280px;
-    }
-    .about__sun-image{
-        width: 75px;
-        height: 75px;
-        animation: rotation 10s infinite linear;
-       /*  animation-name: rotation;
-        animation-duration: 10s;
-        animation-iteration-count: infinite; количество повторений
-        animation-timing-function: linear; функция перехода */
-        position: absolute;
-        z-index: 2; /* шалость - солнце поверх шапки */
-        
-    }
-    @keyframes rotation{
-        0%{
-            transform: rotate(0);
-          }
-        
-          100%{
-            transform: rotate(360deg);
-          }
-    }
-    .about{
-        display: flex; /* Сделайте его flex-контейнером */
-        justify-content: space-around; /* Распределите внутренние элементы */
-        align-items: center; /* Отцентруйте их по вертикали */
-        padding: 115px 20px; /* Выставите нижний и верхний внутренний отступ */
-        background: url('../img/back.png') no-repeat; /* фон будет картинкой по адресу, написанному в URL */
-        background-position: center; /* чтобы картинка разместилась ровно посередине блока */
-        background-size: cover; /* чтобы картинка фона растягивалась под размер секции, полностью покрывая ее (поэтому это cover — покрывать)*/
-    }
-    .about h1{
-        font-size: 36px; /* размер шрифта */
-        line-height: 40px; /* высота строчки */
-    }
-    .about p{
-        font-size: 18px;
-        line-height: 30px;
-        opacity: 0.8; /* прозрачность текста */
-    }
-    .about button{
-        font-size: 18px;
-        border-radius: 20px; /* закругление кнопки */
-        padding: 20px 25px; /* внутренний отступ */
-        margin-top: 20px; /* внешний отступ */
-    }
-    .about__info{
-        max-width: 550px;
-    }
-    .form_container{
-        width: 550px;
-    }
-    .form{
-        display: flex; /* Сделайте его flex-контейнером */
-        justify-content: center; /* Распределите внутренние элементы */
-        align-items: center; /* Отцентруйте их по вертикали */
-        background-color: #1D263A;
-        color: #fff;
-        padding-top: 115px;
-        padding-bottom: 115px;
-        text-align: center;
-    }
-    .form h1{
+    .features__feedback-left h2{
         font-size: 36px;
     }
-    .form p{
-        font-size: 18px;
-        opacity: 0.65;
-    }
-    .form__group{
-        display: flex;
+    .features__feedback-right{
         flex-direction: column;
-        text-align: left;
+        align-items: initial;
     }
-    .form form{ /* форма внутри секции с формой */
-        display: grid; /* grid-контейнер */
-        grid-gap: 20px; /* промежуток между grid-элементами */
-        margin-top: 60px;
+    .features__box h3{
+        font-size: 36px;
     }
-    .form label{ /* все теги label внутри тега с классом form */
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 15px;
-    }
-    .form select, .form input{
-        font-size: 18px;
-        color: #213053;
-        height: 60px;
-        padding: 0px 20px 0px 20px;
-        border-radius: 15px;
-        border: none;
-        appearance: none; /* убрали стрелочку оставшуюся от стилей браузера */
-        outline: none;
-    }
-    .form__submit{
-        font-size: 18px;
-        font-weight: 600;
-        margin-top: 40px;
-    }
-    footer{
-        padding: 90px 20px;
-        font-size: 16px;
-        font-weight: 600;
-    }
-    .footer__container{
-        display: flex;
-        justify-content: center;
-    }
-    .footer__group{
-        margin-right: 80px;
-    }
-    footer h3{
-        font-size: 16px;
-        opacity: 0.7;
+    .features__savings-box{
+        margin-right: 0px;
         margin-bottom: 30px;
     }
-    .footer__links{
-        display: flex;
-        /* align-items: start; */
-        flex-direction: column;
-        /* justify-content: center; */
+    .promo__image{
+            width: 100%;
+            height: 500px;
     }
-    .footer__links a{
-        margin-bottom: 15px;
+    .promo{
+        flex-direction: column-reverse;
+        align-items: initial;
     }
-    .footer__copyright{
-        margin-top: 40px;
-        text-align: center;
-        opacity: 0.5;
+    .promo__right{
+        padding: 50px 10px;
     }
-}
+  
+    .about__image {
+        width: 280px;
+    }
+  
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+ }
 
-@media (max-width: 720px) {
-    body{
-        font-family: 'Raleway', sans-serif;
-        color: #213053;
-        margin: 0;
-    }
-    header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+ @media (max-width: 720px) {
+    header {
         padding: 10px;
-        position: sticky; /* шапка прилипла, но не закрывает контент */
-        background-color:#fff;
-        top: 0;
-        z-index: 1; /* глубина расположения элементов (слои) */
     }
-    .header__logo{
+  
+    .header__logo {
         height: 20px;
     }
-    a{
-        text-decoration: none;
-        color: #213053;
-    }
-    header a{
-        font-size: 15px;
-        font-weight: 600;
+  
+    header a {
         margin-right: 10px;
     }
-    button{
-        font-family: 'Raleway', sans-serif;
-        font-size: 15px;
-        color: #fff;
-        background-color: #23a030;
-        border: none;
-        border-radius: 15px;
-        cursor: pointer;
-        box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
-        padding: 15px;
-    }
-    button:hover{
-        background-color: #f6980c;
-        box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
-        transition: background-color 0.3s ease-in;
-    }
-    .about__image{
-        width: 280px;
-    }
-    .about__sun-image{
-        width: 75px;
-        height: 75px;
-        animation: rotation 10s infinite linear;
-       /*  animation-name: rotation;
-        animation-duration: 10s;
-        animation-iteration-count: infinite; количество повторений
-        animation-timing-function: linear; функция перехода */
-        position: absolute;
-        z-index: 2; /* шалость - солнце поверх шапки */
-        
-    }
-    @keyframes rotation{
-        0%{
-            transform: rotate(0);
-          }
-        
-          100%{
-            transform: rotate(360deg);
-          }
-    }
-    .about{
-        display: flex; /* Сделайте его flex-контейнером */
+  
+    .about {
         flex-direction: column-reverse;
-        justify-content: space-around; /* Распределите внутренние элементы */
-        align-items: center; /* Отцентруйте их по вертикали */
-        padding: 50px 10px; /* Выставите нижний и верхний внутренний отступ */
-        background: url('../img/back.png') no-repeat; /* фон будет картинкой по адресу, написанному в URL */
-        background-position: center; /* чтобы картинка разместилась ровно посередине блока */
-        background-size: cover; /* чтобы картинка фона растягивалась под размер секции, полностью покрывая ее (поэтому это cover — покрывать)*/
-    }
-    .about h1{
-        font-size: 36px; /* размер шрифта */
-        line-height: 40px; /* высота строчки */
-    }
-    .about p{
-        font-size: 18px;
-        line-height: 30px;
-        opacity: 0.8; /* прозрачность текста */
-    }
-    .about button{
-        font-size: 18px;
-        border-radius: 20px; /* закругление кнопки */
-        padding: 20px 25px; /* внутренний отступ */
-        margin-top: 20px; /* внешний отступ */
-    }
-    .about__info{
-        max-width: 550px;
-    }
-    .form_container{
-        width: 550px;
-    }
-    .form{
-        display: flex; /* Сделайте его flex-контейнером */
-        justify-content: center; /* Распределите внутренние элементы */
-        align-items: center; /* Отцентруйте их по вертикали */
-        background-color: #1D263A;
-        color: #fff;
         padding: 50px 10px;
-        text-align: center;
     }
-    .form h1{
+  
+    .about h1 {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .features {
+        padding: 50px 10px 50px 10px;
+    }
+    .cards {
+        grid-template-columns: auto;
+    }
+    .features__feedback{
+        flex-direction: column;
+    }
+    .features__feedback-left{
+        margin-right: 0px;
+    }
+    .features__feedback-left h2{
         font-size: 36px;
     }
-    .form p{
-        font-size: 18px;
-        opacity: 0.65;
-    }
-    .form__group{
-        display: flex;
+    .features__feedback-right{
         flex-direction: column;
-        text-align: left;
+        align-items: initial;
     }
-    .form form{ /* форма внутри секции с формой */
-        display: grid; /* grid-контейнер */
-        grid-gap: 20px; /* промежуток между grid-элементами */
-        margin-top: 60px;
+    .features__box h3{
+        font-size: 36px;
     }
-    .form label{ /* все теги label внутри тега с классом form */
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 15px;
-    }
-    .form select, .form input{
-        font-size: 18px;
-        color: #213053;
-        height: 60px;
-        padding: 0px 20px 0px 20px;
-        border-radius: 15px;
-        border: none;
-        appearance: none; /* убрали стрелочку оставшуюся от стилей браузера */
-        outline: none;
-    }
-    .form__submit{
-        font-size: 18px;
-        font-weight: 600;
-        margin-top: 40px;
-    }
-    footer{
-        padding: 50px 10px;
-        font-size: 16px;
-        font-weight: 600;
-    }
-    .footer__container{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-    .footer__group{
-        margin-right: 80px;
-    }
-    footer h3{
-        font-size: 16px;
-        opacity: 0.7;
+    .features__savings-box{
+        margin-right: 0px;
         margin-bottom: 30px;
     }
-    .footer__links{
-        display: flex;
-        /* align-items: start; */
+    .promo__image{
+        width: 100%;
+        height: 500px;
+    }
+    .promo{
+        flex-direction: column-reverse;
+        align-items: initial;
+    }
+    .promo__right{
+        padding: 50px 10px;
+    }
+  
+    .about__image {
+        width: 280px;
+    }
+  
+    .about__sun-image {
+        width: 75px;
+        height: 75px;
+    }
+  
+    .form {
+        padding: 50px 10px;
+    }
+  
+    .form h1 {
+        font-size: 36px;
+    }
+  
+    footer {
+        padding: 50px 10px;
+    }
+  
+    .footer__container {
         flex-direction: column;
-        /* justify-content: center; */
     }
-    .footer__links a{
-        margin-bottom: 15px;
-    }
-    .footer__copyright{
-        margin-top: 40px;
-        text-align: center;
-        opacity: 0.5;
-    }
-  }
+ }
