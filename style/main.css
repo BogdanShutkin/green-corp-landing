@@ -66,6 +66,7 @@ button:hover{
       }
 }
 .about{
+    position: relative; /* холст (orb-canvas) позиционируется относительно about*/
     display: flex; /* Сделайте его flex-контейнером */
     justify-content: space-around; /* Распределите внутренние элементы */
     align-items: center; /* Отцентруйте их по вертикали */
@@ -74,6 +75,12 @@ button:hover{
     background: url('../img/back.png') no-repeat; /* фон будет картинкой по адресу, написанному в URL */
     background-position: center; /* чтобы картинка разместилась ровно посередине блока */
     background-size: cover; /* чтобы картинка фона растягивалась под размер секции, полностью покрывая ее (поэтому это cover — покрывать)*/
+}
+.orb-canvas{ /* холст */
+    position: absolute; /* холст (orb-canvas) позиционируется относительно about*/
+    top: 0;
+    right: 0;
+    height: 100%;
 }
 .about h1{
     font-size: 70px; /* размер шрифта */
